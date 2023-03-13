@@ -10,6 +10,12 @@ if not x2.isdigit():
     x2=input("koordinata x2: ")
 if not y2.isdigit():
     y2=input("koordinata y2: ")
+if x1==x2:
+    a=0
+    while a==0:
+        x2=input("koordinata x2: ")
+        if x1!=x2:
+            a=1
 x1=int(x1)
 y1=int(y1)
 x2=int(x2)
