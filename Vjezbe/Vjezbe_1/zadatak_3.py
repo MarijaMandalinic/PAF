@@ -2,20 +2,16 @@ x1=input("koordinata x1: ")
 y1=input("koordinata y1: ")
 x2=input("koordinata x2: ")
 y2=input("koordinata y2: ")
-if not x1.isdigit():
+while not x1.isdigit():
     x1=input("koordinata x1: ")
-if not y1.isdigit():
+while not y1.isdigit():
     y1=input("koordinata y1: ")
-if not x2.isdigit():
+while not x2.isdigit():
     x2=input("koordinata x2: ")
-if not y2.isdigit():
+while not y2.isdigit():
     y2=input("koordinata y2: ")
-if x1==x2:
-    a=0
-    while a==0:
-        x2=input("koordinata x2: ")
-        if x1!=x2:
-            a=1
+while x1==x2:
+    x2=input("koordinata x2: ")
 x1=int(x1)
 y1=int(y1)
 x2=int(x2)
@@ -26,4 +22,3 @@ if l<0:
     print("y={}x-{}".format(k,abs(l)))
 else:
     print("y={}x+{}".format(k,l))
-
