@@ -54,10 +54,20 @@ class HarmonicOscillator():
         plt.title('a-t graf')
     
     def period_titranja(self):
-        self.trenutak = 0
-        while self.x > 0:
-              self.trenutak += self.dt
-              self.pomak()
-        return self.trenutak*4
+        if self.x > 0:
+            while self.x >=0:
+                 self.pomak()
+            self.trenutak = 0
+            while self.x < 0:
+                 self.pomak()
+                 self.trenutak += self.dt
+        elif self.x < 0:
+            while self.x <0:
+                 self.pomak()
+                 self.trenutak = 0
+            while self.x > 0:
+                 self.pomak()
+                 self.trenutak += self.dt
+        return self.trenutak*2
         
             
