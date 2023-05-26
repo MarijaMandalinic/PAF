@@ -4,12 +4,12 @@ from mpl_toolkits import mplot3d
 
 class em_polje():
 
-    def __init__(self,t,  m, q, ex, ey, ez, bx, by, bz, vx, vy, vz, dt): #vrijeme, masa, naboj, komponente e, b, v
+    def __init__(self,t,  m, q,e,b, v, dt): #vrijeme, masa, naboj, komponente e, b, v
         self.t = t
         self.dt = dt
-        self.v = np.array((vx, vy, vz))
-        self.e = np.array((ex, ey, ez))
-        self.b = np.array((bx, by, bz))
+        self.v = v
+        self.e = e
+        self.b = b
         self.x = 0
         self.y = 0
         self.z = 0
@@ -35,13 +35,6 @@ class em_polje():
             self.listax.append(self.x)
             self.listay.append(self.y)
             self.listaz.append(self.z)
-        fig = plt.figure()
-        ax = fig.add_subplot(111, projection='3d')
-        ax.plot(self.listax, self.listay, self.listaz)
-        ax.set_xlabel('X')
-        ax.set_ylabel('Y')
-        ax.set_zlabel('Z')
-
         
 
 
